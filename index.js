@@ -29,6 +29,8 @@ const path = require("path");
 
 const app = express();
 
+const PORT = process.env.PORT || 5000;
+
 //! configurations
 
 // get file name and
@@ -73,8 +75,8 @@ cloudinary.config({
   api_secret: process.env.SECRET_KEY,
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`server is running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
 
 module.exports = app;
